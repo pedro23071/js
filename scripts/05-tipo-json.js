@@ -1,3 +1,33 @@
+let pelicula = {
+    titulo: 'test 123',
+    genero: "animacion",
+    year: '1996',
+    director: "test23",
+    mostrar: function(){
+        return `${this.titulo} ${this.genero} año: ${this.year}`
+    },
+}
+
+console.log(pelicula.mostrar())
+
+pelicula.pais = 'USA'
+console.log(pelicula.pais, "asignacion de la variable pais al objeto")
+
+console.log("titulo" in pelicula, "validar si existe un key en un objeto")
+
+
+for(let key in pelicula){
+    console.log(key, "| iterador For en un objeto (muestra las keys del objeto)")
+}
+
+
+for(let key in pelicula){
+    if(typeof pelicula[key] !== "function" ){
+        console.log(pelicula[key],  "| iterador For en un objeto (los valores de cada key)")
+    }
+}
+
+
 let persona = {
     nombre: "Pedro",
     edad: 30,
